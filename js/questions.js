@@ -143,4 +143,29 @@ let $questions = [{
         "d": "All of the above",
         "answer": "b"
 },  
+{
+        "question" : "Organisations can be categorised by the nature or their operations. Organisations categorised as continuous operations:",
+        "a": "Organisations with fixed but flexible facilities that carry out dissimilar operations day to day and produce only against a customer order",
+        "b": "Organisations with fixed facilities that carry out similar operations day after day continuously and produce products for stockpiling in warehouses (real or virtual)",
+        "c": "Neither",
+        "d": "Both",
+        "answer": "b"
+},  
+{
+        "question" : "The Ad hoc approach to software development works well for:",
+        "a": "Larger, established organisations",
+        "b": "Established markets and customer base",
+        "c": "High risk or emerging markets",
+        "d": "Longer term projects",
+        "answer": "c"
+},  
+{
+        "question" : "Process driven approach works well for:",
+        "a": "High risk markets",
+        "b": "Small organisations",
+        "c": "Established markets or customer base",
+        "d": "When there is a minimal number of SPMs available",
+        "answer": "c"
+},  
+ 
 ];
