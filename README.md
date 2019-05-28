@@ -1,8 +1,5 @@
 # quiz [here](https://h3x.github.io/PM-quiz/)
 
-# quiz [here](https://h3x.github.io/database-quiz/)
-
-
 ### How to contribute
 
 First of all, fork this repo, then clone it to your local machine
@@ -41,10 +38,9 @@ Checkout master:
 
 ```git checkout master```
 
-Chen:
+Then:
 
 ```git pull --rebase upstream master```
-
  
 
 Now your master branch on your fork is updated to the lastest changes in the upstream master branch. Checkout your branch now
