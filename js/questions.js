@@ -167,5 +167,76 @@ let $questions = [{
         "d": "When there is a minimal number of SPMs available",
         "answer": "c"
 },  
- 
+{
+        "question" : "Which of the following is not how ad hoc style is administered?",
+        "a": "Large groups with stand-up meetings",
+        "b": "Explaining desired functionality and outcomes",
+        "c": "Negotiating and setting a completion target",
+        "d": "Individual carries out the work",
+        "answer": "a"
+},  
+{
+        "question" : "Which of the following is not how ad hoc style is administered?",
+        "a": "Large groups with stand-up meetings",
+        "b": "Explaining desired functionality and outcomes",
+        "c": "Negotiating and setting a completion target",
+        "d": "Individual carries out the work",
+        "answer": "a"
+},  
+{
+        "question" : "Which of the following is not what poor team morale can lead to?",
+        "a": "Under-performance",
+        "b": "Missing project goals or objectives",
+        "c": "Reduced staff turnover",
+        "d": "A lower quality product",
+        "answer": "c"
+},  
+{
+        "question" : "A company may price their proposal high because they want to pursue a business for political reasons but don't wish to actually take it.",
+        "a": "True",
+        "b": "False",
+        "c": "Both",
+        "d": "None",
+        "answer": "a"
+},   
+{
+        "question" : "The proposal preparation is completed by the software project manager.",
+        "a": "True",
+        "b": "False",
+        "c": "Both",
+        "d": "None",
+        "answer": "b"
+}, 
+{
+        "question" : "What is one thing to particularly watch out for during the technical proposal?",
+        "a": "Methodology",
+        "b": "Inclusions/Exclusions",
+        "c": "Scope",
+        "d": "Responsibilities",
+        "answer": "b"
+}, 
+{
+        "question" : "What is a characteristic of an internal project?",
+        "a": "Revenue will be generated from the project",
+        "b": "The product may be for an outside organisation",
+        "c": "There is no maintenance mode after development",
+        "d": "None of the above",
+        "answer": "d"
+}, 
+{
+        "question" : "Which of the following is a component of a feasibility study?",
+        "a": "Risk assessment",
+        "b": "Quality assessment",
+        "c": "Change management assessment",
+        "d": "User requirements",
+        "answer": "d"
+}, 
+{
+        "question" : "Which of the following is not classified as a tangible benefit when doing a feasibility study?",
+        "a": "Improved customer rapport",
+        "b": "Increased sales",
+        "c": "Improved turnover",
+        "d": "Reduced project cost",
+        "answer": "a"
+}, 
 ];
