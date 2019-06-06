@@ -31,7 +31,7 @@ function getQuestion(){
 }
 
 function  displayQuestions(){
-    // Stores the question and answer.
+    // Stores the question.
     var question = $question.question;
     
     // Answers for the question, stored in a dictionary so answers can be displayed using a loop.
