@@ -31,10 +31,8 @@ function getQuestion(){
 }
 
 function  displayQuestions(){
-    $('input[type="radio"]').prop('checked', false); 
-    $("#quiz_question").html($question.question);
-    
-    console.log($question.question);
+    // Stores the question and answer.
+    var question = $question.question;
     
     // Answers for the question, stored in a dictionary so answers can be displayed using a loop.
     var answers = { a: $question.a,
@@ -42,10 +40,17 @@ function  displayQuestions(){
                     c: $question.c,
                     d: $question.d };
     
-    // If 'NA' is the answer, don't display that option. Benefits a handful of True/False questions.
+    // Clears radio buttons in preparation for answer selection.
+    $('input[type="radio"]').prop('checked', false); 
+    
+    // Displays the question.
+    $("#quiz_question").html(question);
+    
+    // Iterates over the answer choices and displays them.
     for (var answer in answers) {
         $(`label[for='answer_${answer}']`).html(answers[answer]);
         
+        // If 'NA' is the answer, don't display that option. Benefits a handful of True/False questions.
         if (answers[answer] == "NA") {
             $(`#fieldset_${answer}`).hide();
         }
@@ -54,6 +59,7 @@ function  displayQuestions(){
         }
     }
     
+    // Displays current quiz scoring.
     $('#attempted').html('Attempted: ' + $attempt[0]);
     $('#correct').html('Correct: ' + $attempt[1]);
     $('#incorrect').html('Incorrect: ' + ($attempt[0] - $attempt[1]));
