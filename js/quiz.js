@@ -33,10 +33,25 @@ function getQuestion(){
 function  displayQuestions(){
     $('input[type="radio"]').prop('checked', false); 
     $("#quiz_question").html($question.question);
-    $("label[for='answer_a']").html($question.a);
-    $("label[for='answer_b']").html($question.b);
-    $("label[for='answer_c']").html($question.c);
-    $("label[for='answer_d']").html($question.d);
+    
+    // Answers for the question, stored in a dictionary so answers can be displayed using a loop.
+    var questions = { a: $question.a,
+                      b: $question.b,
+                      c: $question.c,
+                      d: $question.d };
+    
+    // If 'NA' is the answer, don't display that option. Benefits a handful of True/False questions.
+    for (var key in questions) {
+        $(`label[for='answer_${key}']`).html(questions[key]);
+        
+        if (questions[key] == 'NA') {
+            $(`#fieldset_${key}`).hide();
+        }
+        else {
+            $(`#fieldset_${key}`).show();
+        }
+    }
+    
     $('#attempted').html('Attempted: ' + $attempt[0]);
     $('#correct').html('Correct: ' + $attempt[1]);
     $('#incorrect').html('Incorrect: ' + ($attempt[0] - $attempt[1]));
