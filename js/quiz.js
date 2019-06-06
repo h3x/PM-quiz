@@ -1,7 +1,10 @@
-let $attempt = [0,0];
 let $question;
 let $form;
 let $submit;
+
+let $total_questions = $questions.length;
+let $scoring = {correct: 0, incorrect: 0, attempts: 0};
+let $counted_incorrect = false;
 
 $(()=>{
 $form = $('#quiz');
@@ -36,6 +39,7 @@ function getQuestion(){
     if($questions.length < 0){
         endQuiz();
     }
+    displayScoring();
     displayQuestions();
 }
 
@@ -67,27 +71,39 @@ function  displayQuestions(){
             $(`#fieldset_${answer}`).show();
         }
     }
-    
-    // Displays current quiz scoring.
-    $('#attempted').html('Attempted: ' + $attempt[0]);
-    $('#correct').html('Correct: ' + $attempt[1]);
-    $('#incorrect').html('Incorrect: ' + ($attempt[0] - $attempt[1]));
 }
 
 function checkAnswer(){
     let $answer = $('input[type="radio"]:checked').val();
 
     if($answer !== "undefined"){
-        $attempt[0]++;
-        if($answer === $question.answer){ 
-            $attempt[1]++;
+        if ($answer === $question.answer) { 
+            $scoring.attempts++;
+            $scoring.correct++;
+            $counted_incorrect = false;
+            displayScoring();
+            
             $question = $questions.splice(Math.floor(Math.random()*$questions.length), 1)[0];
             getQuestion();
         }
-        else{
+        else {
+            if (!$counted_incorrect) {
+                $scoring.attempts++;
+                $scoring.incorrect++;
+                $counted_incorrect = true;
+            }
+            
+            displayScoring();
             displayQuestions();
         }
     }
+}
+
+function displayScoring() {
+    // Displays current quiz scoring.
+    $('#attempted').html(`Attempted: ${$scoring.attempts} of ${$total_questions}`);
+    $('#correct').html(`Correct: ${$scoring.correct}`);
+    $('#incorrect').html(`Incorrect: ${$scoring.incorrect}`);
 }
 
 function endQuiz(){
@@ -96,7 +112,8 @@ function endQuiz(){
     const $radio = $("input[type=radio]",$form);
     $submit.attr("disabled", "disabled");
     $radio.attr("disabled", "disabled");
-    //maybe remove this before submit?
-    $('#answers').append("<hr /><p class='centered'>Quiz Finished! Please refresh to play again!</p>");
+    
+    var score = ((($scoring.correct - $scoring.incorrect) / $total_questions) * 100).toFixed(2);
+    $('#answers').append("<hr /><p class='centered'>Quiz finished! Please refresh to play again!</p>");
+    $('#answers').append(`<p class='centered'>Final score: ${score}%</p>`);
 }
-
