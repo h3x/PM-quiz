@@ -16,7 +16,16 @@ $submit.click( e => e.preventDefault());
 // check answer on submit
 $submit.click(()=> {
     let $ans = $('input[name=answer]:checked').val();
-    checkAnswer();
+    
+    try {
+        checkAnswer();
+    } 
+    catch (e) {
+        if (e.name == 'TypeError') {
+            endQuiz();
+        }
+    }
+    
 });
 $question = $questions.splice(Math.floor(Math.random()*$questions.length), 1)[0];
 getQuestion();
@@ -24,7 +33,7 @@ getQuestion();
 
 function getQuestion(){
 
-    if($questions.length<= 0){
+    if($questions.length < 0){
         endQuiz();
     }
     displayQuestions();
@@ -51,7 +60,7 @@ function  displayQuestions(){
         $(`label[for='answer_${answer}']`).html(answers[answer]);
         
         // If 'NA' is the answer, don't display that option. Benefits a handful of True/False questions.
-        if (answers[answer] == "NA") {
+        if (answers[answer] == "NA" || answers[answer] == null) {
             $(`#fieldset_${answer}`).hide();
         }
         else {
