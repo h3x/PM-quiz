@@ -83,6 +83,10 @@ function checkAnswer(){
             $counted_incorrect = false;
             displayScoring();
             
+            for (var i = 0; i <= 4; i++) {
+                 $(`#fieldset_${"abcd".charAt(i)}`).css('background-color', '#F5F5F5');
+            }
+            
             $question = $questions.splice(Math.floor(Math.random()*$questions.length), 1)[0];
             getQuestion();
         }
@@ -93,6 +97,7 @@ function checkAnswer(){
                 $counted_incorrect = true;
             }
             
+            $(`#fieldset_${$answer}`).css('background-color', '#FF6060');
             displayScoring();
             displayQuestions();
         }
