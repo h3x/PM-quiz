@@ -58,7 +58,7 @@ let $questions = [{
 {
         "question" : "What does the work break down structure consist of?",
         "a": "Start milestone",
-        "b": "Internal mileston",
+        "b": "Internal milestone",
         "c": "End milestone",
         "d": "All of the above",
         "answer": "d"

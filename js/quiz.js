@@ -16,7 +16,16 @@ $submit.click( e => e.preventDefault());
 // check answer on submit
 $submit.click(()=> {
     let $ans = $('input[name=answer]:checked').val();
-    checkAnswer();
+    
+    try {
+        checkAnswer();
+    } 
+    catch (e) {
+        if (e.name == 'TypeError') {
+            endQuiz();
+        }
+    }
+    
 });
 $question = $questions.splice(Math.floor(Math.random()*$questions.length), 1)[0];
 getQuestion();
@@ -24,19 +33,42 @@ getQuestion();
 
 function getQuestion(){
 
-    if($questions.length<= 0){
+    if($questions.length < 0){
         endQuiz();
     }
     displayQuestions();
 }
 
 function  displayQuestions(){
+    // Stores the question.
+    var question = $question.question;
+    
+    // Answers for the question, stored in a dictionary so answers can be displayed using a loop.
+    var answers = { a: $question.a,
+                    b: $question.b,
+                    c: $question.c,
+                    d: $question.d };
+    
+    // Clears radio buttons in preparation for answer selection.
     $('input[type="radio"]').prop('checked', false); 
-    $("#quiz_question").html($question.question);
-    $("label[for='answer_a']").html($question.a);
-    $("label[for='answer_b']").html($question.b);
-    $("label[for='answer_c']").html($question.c);
-    $("label[for='answer_d']").html($question.d);
+    
+    // Displays the question.
+    $("#quiz_question").html(question);
+    
+    // Iterates over the answer choices and displays them.
+    for (var answer in answers) {
+        $(`label[for='answer_${answer}']`).html(answers[answer]);
+        
+        // If 'NA' is the answer, don't display that option. Benefits a handful of True/False questions.
+        if (answers[answer] == "NA" || answers[answer] == null) {
+            $(`#fieldset_${answer}`).hide();
+        }
+        else {
+            $(`#fieldset_${answer}`).show();
+        }
+    }
+    
+    // Displays current quiz scoring.
     $('#attempted').html('Attempted: ' + $attempt[0]);
     $('#correct').html('Correct: ' + $attempt[1]);
     $('#incorrect').html('Incorrect: ' + ($attempt[0] - $attempt[1]));
