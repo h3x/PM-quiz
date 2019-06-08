@@ -174,15 +174,7 @@ let $questions = [{
         "c": "Negotiating and setting a completion target",
         "d": "Individual carries out the work",
         "answer": "a"
-},  
-{
-        "question" : "Which of the following is not how ad hoc style is administered?",
-        "a": "Large groups with stand-up meetings",
-        "b": "Explaining desired functionality and outcomes",
-        "c": "Negotiating and setting a completion target",
-        "d": "Individual carries out the work",
-        "answer": "a"
-},  
+},    
 {
         "question" : "Which of the following is not what poor team morale can lead to?",
         "a": "Under-performance",
