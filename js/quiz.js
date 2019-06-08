@@ -43,7 +43,7 @@ function getQuestion(){
     displayQuestions();
 }
 
-function  displayQuestions(){
+function displayQuestions(){
     // Stores the question.
     var question = $question.question;
     
@@ -92,7 +92,6 @@ function checkAnswer(){
         }
         else {
             if (!$counted_incorrect) {
-                $scoring.attempts++;
                 $scoring.incorrect++;
                 $counted_incorrect = true;
             }
@@ -105,8 +104,15 @@ function checkAnswer(){
 }
 
 function displayScoring() {
-    // Displays current quiz scoring.
-    $('#attempted').html(`Attempted: ${$scoring.attempts} of ${$total_questions}`);
+    // Displays current question number. Accounts for 0-index.
+    if ($questions.length > 0) {
+        $('#attempted').html(`Question ${$scoring.attempts + 1} of ${$total_questions}`);
+    }
+    else {
+        $('#attempted').html(`Question ${$scoring.attempts} of ${$total_questions}`);
+    }
+    
+    // Displays current scoring.
     $('#correct').html(`Correct: ${$scoring.correct}`);
     $('#incorrect').html(`Incorrect: ${$scoring.incorrect}`);
 }
