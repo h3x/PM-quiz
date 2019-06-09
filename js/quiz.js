@@ -79,7 +79,11 @@ function checkAnswer(){
     if($answer !== "undefined"){
         if ($answer === $question.answer) { 
             $scoring.attempts++;
-            $scoring.correct++;
+            
+            if (!$counted_incorrect) {
+                $scoring.correct++;
+            }
+            
             $counted_incorrect = false;
             displayScoring();
             
