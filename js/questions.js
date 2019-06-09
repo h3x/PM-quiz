@@ -64,7 +64,7 @@ let $questions = [{
         "answer": "d"
 },  
 {
-        "question" : "What is not a benefit of prince 2",
+        "question" : "What is not a benefit of PRINCE2?",
         "a": "Allows early warning and detection of problems.",
         "b": "Consistent set of benchmarks, processes, and procedures.",
         "c": "Quick iteration sprints of the project",
@@ -93,7 +93,7 @@ let $questions = [{
         "b": "The project was on time",
         "c": "The software specification and the user requirements were met",
         "d": "Minimal change requests from the client",
-        "answer": "c"
+        "answer": "d"
 },
 {
         "question" : "Project managers have to assess the risks that may affect a project.",
@@ -281,7 +281,7 @@ let $questions = [{
 },  
 {
         "question" : "Infrastructure resources include:",
-        "a": "Financial and moneytary concerns",
+        "a": "Financial and monetary concerns",
         "b": "Office space",
         "c": "Staff",
         "d": "Time",
@@ -291,7 +291,7 @@ let $questions = [{
         "question" : "'Tasks allocated as demand dictates' would be an operation example of: ",
         "a": "Process driven software development approach",
         "b": "PRINCE2",
-        "c": "Ah-hoc driven software development approach",
+        "c": "Ad-hoc driven software development approach",
         "d": "Waterfall approach",
         "answer": "c"
 },  
