@@ -230,5 +230,98 @@ let $questions = [{
         "c": "Improved turnover",
         "d": "Reduced project cost",
         "answer": "a"
+},  
+{
+        "question" : "What is the objective of software project management?",
+        "a": "To deliver a product on cost, on budget, to stakeholder expectations",
+        "b": "To increase revenu of the organisation",
+        "c": "To increase the reputation of the SPM",
+        "d": "To post on facebook",
+        "answer": "a"
+},  
+{
+        "question" : "What is a project?",
+        "a": "A joint effort to deliver a product or service",
+        "b": "A number of people striving to achieve a goal",
+        "c": "A temporary endevour by a group of people",
+        "d": "All of the above",
+        "answer": "d"
+},  
+{
+        "question" : "What is a key characteristic of software projects specifically?",
+        "a": "Defined and unchanging scope of works",
+        "b": "Moderate to high failure rate",
+        "c": "Usually more than a single person endevour",
+        "d": "No two projects will be the same",
+        "answer": "b"
+},  
+{
+        "question" : "A process driven approach to software development: ",
+        "a": "Has a single leader",
+        "b": "Has minimal documentation",
+        "c": "Has strict processes for all activities",
+        "d": "Has no strict processes",
+        "answer": "c"
+},  
+{
+        "question" : "An Ad-Hoc approch to software development",
+        "a": "Has an organisational support structure",
+        "b": "Is highly structured",
+        "c": "Has documented processes for all activities",
+        "d": "Has minimal documentation and processes",
+        "answer": "d"
+},  
+{
+        "question" : "A type of sofware project is: ",
+        "a": "New development",
+        "b": "Intergration",
+        "c": "Maintence",
+        "d": "All of the above",
+        "answer": "d"
+},  
+{
+        "question" : "Infrastructure resources include:",
+        "a": "Financial and moneytary concerns",
+        "b": "Office space",
+        "c": "Staff",
+        "d": "Time",
+        "answer": "b"
+},  
+{
+        "question" : "'Tasks allocated as demand dictates' would be an operation example of: ",
+        "a": "Process driven software development approach",
+        "b": "PRINCE2",
+        "c": "Ah-hoc driven software development approach",
+        "d": "Waterfall approach",
+        "answer": "c"
+},  
+{
+        "question" : "The project initiation note (PIN), the request for proposal (RFP), and the technical specifications are contained in which type of plan?",
+        "a": "The project management plan",
+        "b": "The build plan",
+        "c": "The deployment plan",
+        "d": "The handover plan",
+        "answer": "a"
+},{
+        "question" : "The configuration of the intergration environment, the approach for intergration, and the QA processes for accepting software components, are contained in which type of plan?",
+        "a": "The project management plan",
+        "b": "The build plan",
+        "c": "The deployment plan",
+        "d": "The handover plan",
+        "answer": "b"
+},{
+        "question" : "A schematic diagram of componets, technical methods for deploying the build, and user support for deployment, are contained in which type of plan?",
+        "a": "The project management plan",
+        "b": "The build plan",
+        "c": "The deployment plan",
+        "d": "The handover plan",
+        "answer": "c"
+},{
+        "question" : "This type of plan details how functionality will be delivered to the client.",
+        "a": "The project management plan",
+        "b": "The build plan",
+        "c": "The deployment plan",
+        "d": "The handover plan",
+        "answer": "d"
 }, 
 ];
